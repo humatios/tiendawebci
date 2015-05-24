@@ -49,7 +49,7 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     <h4 class="modal-title">Eliminar Categoria</h4>
                                 </div>
-                                <form action="<?php echo base_url(); ?>admin/eliminadoSuaveCategoria" method="post">
+                                <form action="<?php echo base_url(); ?>admin/eliminadoSuave/Categoria" method="post">
                                     <div class="modal-body">
                                         Esta seguro que quiere eliminar esta categoria?   
                                         <input type="hidden" name="id" value="<?php echo $valor->id; ?>">                                
