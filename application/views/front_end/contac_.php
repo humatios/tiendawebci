@@ -1,8 +1,10 @@
 <section class="row">
     <div class="col-md-8">
         <br/><br/>
+        
+        <?php echo validation_errors(); ?>
 
-        <form class="form-horizontal" action="" method="post">
+        <form class="form-horizontal" action="<?php echo base_url() ?>home/contact" method="post">
             <div class="form-group">
                 <label class="control-label col-xs-3">Nombre:</label>
                 <div class="col-xs-7">
@@ -12,7 +14,7 @@
             <div class="form-group">
                 <label class="control-label col-xs-3">Email:</label>
                 <div class="col-xs-7">
-                    <input type="email" name="email" class="form-control" required="required" id="email" placeholder="Email" tabindex="2" title="Email">                                
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" tabindex="2" title="Email">                                
                 </div>
             </div>
             <div class="form-group">

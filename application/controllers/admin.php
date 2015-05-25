@@ -133,5 +133,14 @@ class Admin extends CI_Controller {
         $this->basemodelo_model->eliminadoSuave($tabla, $datos);
         redirect(base_url() . 'admin/producto');
     }
+    
+    //Mensaje
+    
+    public function mensaje() {
+        $datos['titulo'] = 'Mensajes';
+        $datos['contenido'] = 'back_end/mensaje_';
+        $datos['valores'] = $this->basemodelo_model->Obtener('contacto');
+        $this->load->view('plantilla/_back_end/_plantilla_b.php', $datos);
+    }
 
 }
