@@ -1,18 +1,15 @@
 <section class="row">
     <div class="col-md-12">
         
-        <button class="btn btn-link" data-toggle="modal" data-target="#mAgregar"> Add Categoria </button>
-
-        <?php $this->load->view('back_end/modal_agregar'); ?>
-
         <div class="table-responsive">
             <table class="table table-hover table-bordered" >
                 <thead>                    
                     <tr>
                         <th class="text-center">#</th>
                         <th class="text-center">Nombre</th>
-                        <th class="text-center">Estado</th>
-                        <th class="text-center" colspan="2">Accion</th>
+                        <th class="text-center">Email</th>
+                        <th class="text-center">Asunto</th>
+                        <th class="text-center">Mensaje</th>
                     </tr>
                 </thead>
                 <tbody class="text-center">
@@ -20,24 +17,10 @@
                         <tr>
                             <td><?php echo $valor->id; ?></td>
                             <td><?php echo $valor->nombre; ?></td>
-                            <td>
-                                <?php
-                                $text = '';
-                                $activo = $valor->activo;
-                                if ($activo == 0) {
-                                    $text = 'Desactivado';
-                                } else {
-                                    $text = 'Activo';
-                                }
-                                echo $text;
-                                ?>
-                            </td>
-                            <td>
-                                <a href="<?php base_url(); ?>editarCategoria/<?php echo $valor->id; ?>"> Editar </a>
-                            </td>
-                            <td>
-                                <button class="btn btn-link" data-toggle="modal" data-target="#m<?php echo $valor->id; ?>"> Eliminar </button>
-                            </td>
+                            <td><?php echo $valor->email; ?></td>
+                            <td><?php echo $valor->asunto; ?></td>
+                            <td><?php echo $valor->mensaje; ?></td>
+                            
                         </tr>
 
                     <!-- Modal -->
@@ -71,3 +54,4 @@
         </div>
     </div>
 </section>
+
