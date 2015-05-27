@@ -3,7 +3,7 @@
     <div class = "form-group">
         <label class = "control-label col-xs-3">Usuario:</label>
         <div class = "col-xs-7">
-            <input type = "text" name = "ID" class = "form-control" required = "required" id = "id" placeholder = "Nombre" tabindex = "1" title = "Usuario">
+            <input type = "text" name = "user" class = "form-control" required = "required" id = "user" placeholder = "Usuario" tabindex = "1" title = "Usuario">
         </div>
     </div>
     <div class = "form-group">
@@ -42,12 +42,18 @@
             <input type = "tel" name = "telefono" class = "form-control" placeholder = "Telefono" tabindex = "7">
         </div>
     </div>
+    <div class = "form-group">
+        <label class = "control-label col-xs-3">Contraseña:</label>
+        <div class = "col-xs-7">
+            <input type = "password" name = "password" class = "form-control" required = "required" id = "password"  tabindex = "8" title = "Contraseña">
+        </div>
+    </div>
     
     <br>
     <div class = "form-group">
         <div class = "col-xs-offset-3 col-xs-9">
-            <input type = "submit" class = "btn btn-primary" value = "Enviar" tabindex = "8">
-            <input type = "reset" class = "btn btn-default" value = "Limpiar" tabindex = "9">
+            <input type = "submit" class = "btn btn-primary" value = "Enviar" tabindex = "9">
+            <input type = "reset" class = "btn btn-default" value = "Limpiar" tabindex = "10">
         </div>
     </div>
 </form>

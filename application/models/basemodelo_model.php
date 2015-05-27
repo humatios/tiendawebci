@@ -38,5 +38,23 @@ class Basemodelo_model extends CI_Model {
     public function eliminadoSuave ($tabla, $datos){
         $query = $this->db->where('id', $datos['id'])->update($tabla, $datos);
     }
+    
+    public function getx($tabla, $id, $field) {
+        $query = $this->db->where($field, $id)->get($tabla);
+        if ($query->num_rows() > 0) {
+            return $query->row();
+        } else {
+            return FALSE;
+        }
+    }
+    
+    public function getxx($tabla, $id, $field, $id2, $field2) {
+        $query = $this->db->where($field, $id)->where($field2, $id2)->get($tabla);
+        if ($query->num_rows() > 0) {
+            return $query->row();
+        } else {
+            return FALSE;
+        }
+    }
 
 }
