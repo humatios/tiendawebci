@@ -64,11 +64,15 @@ class Signup extends CI_Controller {
             
         );
         if ($this->basemodelo_model->getxx($tabla, $datos['user'], 'user',$datos['password'], 'password')===FALSE) {
-            $datum['titulo'] = 'Perfil';
+            $datum['titulo'] = 'error';
             $datum['mensaje'] = 'usuario o contraseña erronea';
             $datum['view1'] = 'front_end/error_';
             $datum['view2'] = 'front_end/login_';
             $this->load->view('front_end/twoviews_.php', $datum);
+        }else if($this->basemodelo_model->getxx($tabla, $datos['user'], 'user',1, 'permisos')!==FALSE){
+            $datos['titulo'] = 'Administrador';
+            $datos['contenido'] = 'back_end/contenidob_';
+            $this->load->view('plantilla/_back_end/_plantilla_b.php', $datos);
         }else{
             $this->profile($datos['user']);
         }
